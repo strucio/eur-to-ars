@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Pull Docker image
         run: |
-          docker pull strucio/colon:latest
+          docker pull strucio/eur-to-ars:latest
 
       - name: Run Exchange Rate Monitor
         run: |
@@ -22,4 +22,4 @@ jobs:
             -e RATE_THRESHOLD=${{ vars.RATE_THRESHOLD }} \
             -e MAX_RETRIES=${{ vars.MAX_RETRIES }} \
             -e DELAY_BETWEEN_REQUESTS=${{ vars.DELAY_BETWEEN_REQUESTS }} \
-            strucio/colon:latest
+            strucio/eur-to-ars:latest
