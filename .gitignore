@@ -1,0 +1,22 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache
+.coverage
+venv/
+.venv/
+
+# Development
+debug_output/
+*.log
+
+# OS
+.DS_Store
+*.swp
