@@ -15,9 +15,9 @@ class ExchangeRateMonitor:
         # Load configuration
         self.url = os.getenv('WESTERN_UNION_URL')
         self.webhook_url = os.getenv('DISCORD_WEBHOOK_URL')
-        self.threshold = float(os.getenv('RATE_THRESHOLD', '1700.0'))
-        self.max_retries = int(os.getenv('MAX_RETRIES', '3'))
-        self.delay = float(os.getenv('DELAY_BETWEEN_REQUESTS', '1.0'))
+        self.threshold = float(os.getenv('RATE_THRESHOLD') or '1700.0')
+        self.max_retries = int(os.getenv('MAX_RETRIES') or '3')
+        self.delay = float(os.getenv('DELAY_BETWEEN_REQUESTS') or '1.0')
         
         # Validate and initialize
         self._validate_config()
