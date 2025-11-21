@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pull Docker image
-        run: |
-          docker pull strucio/eur-to-ars:latest
-
       - name: Run Exchange Rate Monitor
         run: |
           docker run --rm \
